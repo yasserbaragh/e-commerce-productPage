@@ -1,0 +1,131 @@
+.swiper-button-prev, .swiper-button-next {
+    background-color: white;
+    border-radius: 50%;
+    height: 35px;
+    width: 35px;
+}
+
+.swiper-button-prev::after, .swiper-button-next::after {
+    font-size: 10px;
+    font-weight: 900;
+    color: black;
+}
+
+.home {
+    .pictures {
+        .photos {
+            display: none;
+        }
+
+    }
+    .description {
+        .container {
+            .orange {
+                text-transform: uppercase;
+                color: $Orange;
+                font-size: 0.8rem;
+                font-weight: 700;
+                letter-spacing: 1.5px;
+                word-spacing: 1.5px;
+            }
+            h1 {
+                text-transform: capitalize;
+                font-weight: 700;
+                font-size: 1.6rem;
+                margin-bottom: 10px;
+            }
+            p {
+                color: $Dark-grayish-blue;
+                font-size: 0.8rem;
+            }
+
+            .pricing {
+                margin: 20px 0;
+                display: flex;
+                justify-content: space-between;
+
+                .new-price {
+                    flex: 1;
+                    display: flex;
+                    column-gap: 20px;
+
+                    .discount {
+                        background-color: $Pale-orange;
+                        height: 25px;
+                        width: 40px;
+                        text-align: center;
+                        margin-top: 2px;
+                        border-radius: 5px;
+                        color: $Orange;
+                        font-weight: 700;
+                        font-size: 0.9rem;
+                    }
+                }
+                .old-price {
+                    position: relative;
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        top: 11px;
+                        left: 0;
+                        height: 1px;
+                        width: 45px;
+                        background-color: $Dark-grayish-blue;
+                    }
+                }
+            }
+            .add-to-cart {
+                .number {
+                    display: flex;
+                    justify-content: space-between;
+                    margin: 20px 0;
+
+                    button {
+                        border: none;
+                        background-color: transparent;
+
+                        &:hover {
+                            cursor: pointer;
+                        }
+                    }
+                    span {
+                        font-weight: 700;
+                    }
+                }
+                .cart {
+                    position: absolute;
+                    top: 25px;
+                    left: 73%;
+
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+                .button {
+                    text-align: center;
+                    button {
+                        width: 90%;
+                        border: none;
+                        padding: 10px;
+                        background-color: $Orange;
+                        color: white;
+                        font-weight: 700;
+                        font-size: 0.9rem;
+                        border-radius: 10px;
+
+                        &:hover {
+                            cursor: pointer; 
+                            opacity: 0.8;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.active {
+    border: 3px solid $Orange;
+    opacity: 0.5;
+}

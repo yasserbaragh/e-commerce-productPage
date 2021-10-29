@@ -1,0 +1,140 @@
+@include pc {
+    .home {
+        display: flex;
+        justify-content: space-between;
+        column-gap: 50px;
+        padding: 80px 150px;
+
+        .pictures {
+            width: 50vw;
+            .photos {
+                display: block;
+
+                &.activ {
+                    z-index: 10;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 400px;
+
+                    .close {
+                        display: block;
+                        float: right;
+                        margin-bottom: 20px;
+                        color: white;
+
+                        &:hover {
+                            cursor: pointer;
+                        }
+                    }
+                    
+                }
+
+                .close {
+                    display: none;
+                }
+
+                .big-pic {
+                    margin-bottom: 20px;
+
+                    img {
+                        border-radius: 10px;
+
+                        &:hover {
+                            cursor: pointer;
+                        }
+                    }
+                }
+                .small-pics {
+                    display: grid;
+                    grid-template-columns: repeat(4, 1fr);
+                    column-gap: 20px;
+
+                    img {
+                        width: 100%;
+                        border-radius: 10px;
+
+                        &:hover {
+                            opacity: 0.8;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+            .swiper {
+                display: none;
+                
+               
+            }
+        }
+        .description {
+            width: 50vw;
+            padding: 20px 0;
+
+            .container {
+
+                h1 {
+                    margin: 20px 0;
+                }
+
+                .pricing {
+                    display: block;
+
+                    .new-price {
+                        .discount {
+                            margin: auto 0;
+                        }
+                    }
+                }
+
+                .add-to-cart {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    column-gap: 10px;
+
+                    .cart {
+                        position: absolute;
+                        top: 25px;
+                        left: 85%;
+                        z-index: 10;
+                    }
+
+                    .number {
+                        background-color: $Light-grayish-blue;
+                        padding: 10px;
+                        margin-top: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include big-pc {
+    .home {
+        .description {
+            padding: 70px 0;
+            margin-left: 50px;
+
+            .container {
+                h1 {
+                    font-size: 2.8rem;
+                }
+
+                p {
+                    font-size: 1.2rem;
+                }
+
+                .add-to-cart {
+                    font-size: 1.4rem;
+
+                    .button {
+                        font-size: 1.4rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
